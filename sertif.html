@@ -1,0 +1,543 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://lmpixels.com/wp/kerge-wp/demo-op/xmlrpc.php">
+	<title>Best Practices for Animated Progress Indicators &#8211; Alex Smith</title>
+	<meta name='robots' content='max-image-preview:large'>
+	<link rel='dns-prefetch' href='//fonts.googleapis.com'>
+	<link rel='dns-prefetch' href='//s.w.org'>
+	<link rel="alternate" type="application/rss+xml" title="Alex Smith &raquo; Feed" href="assets/feed/index.rss">
+	<link rel="alternate" type="application/rss+xml" title="Alex Smith &raquo; Comments Feed"
+		href="..\..\..\..\comments\feed\index.rss">
+	<link rel="alternate" type="application/rss+xml"
+		title="Alex Smith &raquo; Best Practices for Animated Progress Indicators Comments Feed" href="assets/feed/index.rss">
+	<script type="text/javascript">
+		window._wpemojiSettings = {
+			"baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/",
+			"ext": ".png",
+			"svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/",
+			"svgExt": ".svg",
+			"source": {
+				"concatemoji": "https:\/\/lmpixels.com\/wp\/kerge-wp\/demo-op\/wp-includes\/js\/wp-emoji-release.min.js"
+			}
+		};
+		! function (e, a, t) {
+			var n, r, o, i = a.createElement("canvas"),
+				p = i.getContext && i.getContext("2d");
+
+			function s(e, t) {
+				var a = String.fromCharCode;
+				p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+				e = i.toDataURL();
+				return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+			}
+
+			function c(e) {
+				var t = a.createElement("script");
+				t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+			}
+			for (o = Array("flag", "emoji"), t.supports = {
+					everything: !0,
+					everythingExceptFlag: !0
+				}, r = 0; r < o.length; r++) t.supports[o[r]] = function (e) {
+				if (!p || !p.fillText) return !1;
+				switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+					case "flag":
+						return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356,
+							56826, 55356, 56819
+						], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128,
+							56421, 56128, 56430, 56128, 56423, 56128, 56447
+						], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128,
+							56430, 8203, 56128, 56423, 8203, 56128, 56447
+						]);
+					case "emoji":
+						return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+				}
+				return !1
+			}(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports
+				.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+			t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t
+				.readyCallback = function () {
+					t.DOMReady = !0
+				}, t.supports.everything || (n = function () {
+						t.readyCallback()
+					}, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !
+					1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () {
+						"complete" === a.readyState && t.readyCallback()
+					})), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n
+						.wpemoji)))
+		}(window, document, window._wpemojiSettings);
+	</script>
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel='stylesheet' id='css-0-css' href='assets/css/fd94db2d-1619509278.min.css' type='text/css'
+		media='all'>
+	<link rel='stylesheet' id='kerge-google-fonts-css'
+		href='https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic'
+		type='text/css' media='all'>
+	<script type='text/javascript' src='assets/js/fa45314f-1618521313.min.js' id='js-1-js'></script>
+	<link rel="https://api.w.org/" href="assets/json/index.json">
+	<link rel="alternate" type="application/json" href="assets/json/fw-portfolio/105.json">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="assets/xml/xmlrpc.xml?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="assets/xml/wp-includes/wlwmanifest.xml">
+	<meta name="generator" content="WordPress 5.7.1">
+	<link rel="canonical" href="index.htm">
+	<link rel='shortlink' href='index.htm?p=105'>
+	<link rel="alternate" type="application/json+oembed"
+		href="assets/json/oembed/1.0/embed-3.json?url=https%3A%2F%2Flmpixels.com%2Fwp%2Fkerge-wp%2Fdemo-op%2F2018%2F04%2F06%2Fbest-practices-for-animated-progress-indicators%2F">
+	<link rel="alternate" type="text/xml+oembed"
+		href="assets/json/oembed/1.0/embed-3.xml?url=https%3A%2F%2Flmpixels.com%2Fwp%2Fkerge-wp%2Fdemo-op%2F2018%2F04%2F06%2Fbest-practices-for-animated-progress-indicators%2F&#038;format=xml">
+	<style type="text/css">
+		.recentcomments a {
+			display: inline !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+	</style>
+	<style type="text/css" id="wp-custom-css">
+		.section-inner.start-page-full-width {
+			min-height: 0;
+		}
+	</style>
+</head>
+
+<body data-rsssl="1"
+	class="post-template-default single single-post postid-105 single-format-standard wp-embed-responsive masthead-fixed full-width singular">
+
+	<!-- Loading animation -->
+	<div class="preloader">
+		<div class="preloader-animation">
+			<div class="preloader-spinner">
+			</div>
+		</div>
+	</div>
+	<!-- /Loading animation -->
+
+	<div id="page" class="page-layout">
+
+		<header id="site_header" class="header mobile-menu-hide">
+			<div class="header-content clearfix">
+				<div class="header-image">
+					<a href="index.html">
+						<img src="assets/img/cesar-rincon-160.jpg" alt="image">
+					</a>
+				</div>
+
+				<div class="site-title-block">
+					<a href="index.html">
+						<h1 class="site-title">Alex Smith</h1>
+
+					</a>
+				</div>
+
+
+				<!-- Navigation -->
+				<div class="site-nav dl-menuwrapper">
+					<!-- Main menu -->
+					<ul id="menu-classic-menu" class="kerge-classic-menu site-main-menu dl-menu dl-menuopen">
+						<li id="menu-item-109"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-109">
+							<a rel="about-me" href="index.html#about-me" data-hover="1">About Me</a></li>
+						<li id="menu-item-110"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-110">
+							<a rel="resume" href="index.html#resume" data-hover="1">Resume</a></li>
+						<li id="menu-item-111"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-111">
+							<a rel="portfolio" href="index.html#portfolio" data-hover="1">Portfolio</a></li>
+						<li id="menu-item-112"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-112">
+							<a rel="posts" href="index.html#posts" data-hover="1">Blog</a></li>
+						<li id="menu-item-113"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-113">
+							<a rel="contact" href="index.html#contact" data-hover="1">Contact</a></li>
+						<li id="menu-item-214"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-214">
+							<a rel="extra" href="index.html#extra" data-hover="1">Extra</a></li>
+						<li id="menu-item-297"
+							class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-297">
+							<a target="_blank" href="index.html#about-me" data-hover="1">Get it Now</a></li>
+					</ul> <!-- /Main menu -->
+					<div class="header-search">
+						<form role="search" id="search-form" method="get"
+							action="https://lmpixels.com/wp/kerge-wp/demo-op/">
+							<input type="text" id="search" class="form-control" name="s" value="" placeholder="Search"
+								required="required">
+							<button type="submit" id="search-submit" class="search-submit" title="Search">
+								<i class="fa fa-search"></i>
+							</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- Social Links -->
+				<div class="social-links">
+					<a href="#" target="_blank">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a href="#" target="_blank">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+				</div>
+				<!-- /Social Links -->
+
+				<!-- Copyrights -->
+				<div class="copyrights">© 2019 All rights reserved.</div>
+				<!-- /Copyrights -->
+			</div>
+		</header>
+		<!-- /Header -->
+
+		<!-- Mobile Header -->
+		<div class="mobile-header mobile-visible">
+			<div class="mobile-logo-container">
+				<div class="mobile-header-image">
+					<a href="index.html">
+						<img src="assets/img/cesar-rincon-160.jpg" alt="image">
+					</a>
+				</div>
+
+				<div class="mobile-site-title">
+					<a href="index.html">
+						Alex Smith </a>
+				</div>
+			</div>
+
+			<a class="menu-toggle mobile-visible">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<!-- /Mobile Header -->
+		<div id="main" class="site-main">
+			<div id="main-content" class="single-page-content content-page-with-sidebar">
+				<div id="primary" class="content-area">
+					<div id="content" class="page-content site-content" role="main">
+
+						<article id="post-105"
+							class="post-105 post type-post status-publish format-standard has-post-thumbnail hentry category-ui tag-animate tag-bar tag-design tag-progress tag-ui">
+
+							<div class="post-thumbnail">
+								<img width="1920" height="900"
+									src="assets/img/blog_post_6_full.jpg"
+									class="attachment-full size-full wp-post-image" alt="" loading="lazy"
+									srcset="assets/img/blog_post_6_full.jpg 1920w, assets/img/blog_post_6_full-300x141.jpg 300w, assets/img/blog_post_6_full-768x360.jpg 768w, assets/img/blog_post_6_full-1024x480.jpg 1024w"
+									sizes="(max-width: 1920px) 100vw, 1920px"> </div>
+
+
+							<div class="post-content">
+								<header class="entry-header">
+
+
+									<div class="entry-meta entry-meta-top">
+										<span><a href="..\..\..\..\category\ui\index.htm"
+												rel="category tag">UI</a></span>
+									</div><!-- .entry-meta -->
+
+									<h2 class="entry-title">Best Practices for Animated Progress Indicators</h2>
+								</header><!-- .entry-header -->
+
+								<div class="entry-content">
+									<div class="fw-page-builder-content">
+										<section class="fw-main-row ">
+											<div class="fw-container">
+												<div class="row">
+
+
+													<div class=" col-xs-12 col-sm-12 ">
+														<div id="col_inner_id-608f7da1a85dd" class="fw-col-inner"
+															data-paddings="0px 0px 0px 0px">
+															<p>Nulla nulla nisl, sodales ac nulla ac, consequat
+																vulputate purus. Curabitur tincidunt ipsum vel nibh
+																rutrum accumsan. Nunc ullamcorper posuere leo, vitae
+																aliquet risus pharetra in. Integer turpis eros, iaculis
+																et mi non, pulvinar egestas leo. Etiam sagittis ex
+																turpis, vitae cursus tortor interdum eu. Quisque
+																ultrices nunc eget erat vestibulum euismod. Ut mauris
+																nisi, facilisis at arcu nec, facilisis porttitor lorem.
+															</p>
+															<p>Vivamus vitae neque molestie, porta libero sed, tincidunt
+																leo. In nec posuere odio, id rhoncus lorem. Proin id
+																erat ut dolor condimentum viverra. Praesent viverra sed
+																dolor ac luctus. Praesent placerat id lorem quis
+																lacinia.</p>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+
+
+													<div class=" col-xs-12 col-sm-12 ">
+														<div id="col_inner_id-608f7da1a8922" class="fw-col-inner"
+															data-paddings="0px 0px 0px 0px">
+															<blockquote class="quote fw-quote-left fw-quote-md ">
+																Maecenas id finibus felis. Etiam vitae nibh et felis
+																efficitur pellentesque. Mauris suscipit sapien nunc, a
+																lacinia nibh feugiat ut. In hac habitasse platea
+																dictumst. <footer class="quote-author">
+																	<span>
+																		Larry L. Johnson </span>
+																</footer>
+															</blockquote>
+														</div>
+													</div>
+												</div>
+
+												<div class="row">
+
+
+													<div class=" col-xs-12 col-sm-12 ">
+														<div id="col_inner_id-608f7da1a8c99" class="fw-col-inner"
+															data-paddings="0px 0px 0px 0px">
+															<p>Etiam interdum vulputate risus, vitae elementum neque
+																consectetur sed. Donec at risus dui. Ut in suscipit
+																neque. Vestibulum sit amet lobortis magna, commodo
+																venenatis ante. Cras molestie, ex a auctor lacinia,
+																risus est aliquam risus, sit amet semper purus tortor id
+																ante. Donec lacus ipsum, porttitor et libero a,
+																fringilla auctor quam. Sed in nisl id libero tincidunt
+																aliquet. Aenean dui ipsum, auctor ut leo ut, semper
+																dignissim lacus. Suspendisse faucibus viverra consequat.
+																Maecenas efficitur massa vel eros sagittis dapibus. Nam
+																lobortis mi in turpis hendrerit eleifend. Nulla non
+																massa felis.</p>
+															<p>Donec sit amet dolor ante. Vivamus vel massa accumsan,
+																faucibus quam quis, convallis velit. Aliquam erat
+																volutpat. Integer imperdiet diam quis arcu venenatis,
+																quis sagittis nibh rhoncus. Donec non nisi scelerisque,
+																sodales metus quis, accumsan mauris. Curabitur volutpat
+																risus rutrum erat condimentum tristique. Nullam at felis
+																diam. Quisque dictum felis non ante pretium mollis.
+																Aliquam turpis neque, varius nec diam a, aliquam
+																pulvinar diam. Interdum et malesuada fames ac ante ipsum
+																primis in faucibus. Sed ipsum libero, aliquet sed
+																bibendum faucibus, semper a dui.</p>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</section>
+									</div>
+								</div><!-- .entry-content -->
+
+								<div class="entry-meta entry-meta-bottom">
+									<div class="date-author">
+										<span class="entry-date"><a href="index.htm" rel="bookmark"><i
+													class="fa fa-fw fa-clock-o"></i> <time class="entry-date"
+													datetime="2018-04-06T10:36:29+00:00">April 6,
+													2018</time></a></span><span class="author vcard"><a class="url fn n"
+												href="..\..\..\..\author\kerge\index.htm" rel="author"><i
+													class="fa fa-fw fa-user"></i> kerge</a></span> </div>
+
+									<!-- Share Buttons -->
+									<div class="entry-share btn-group share-buttons">
+										<a href="https://www.facebook.com/sharer/sharer.php?u=https://lmpixels.com/wp/kerge-wp/demo-op/2018/04/06/best-practices-for-animated-progress-indicators/"
+											onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+											class="btn" target="_blank" title="Share on Facebook">
+											<i class="fa fa-facebook"></i>
+										</a>
+
+										<a href="https://twitter.com/share?url=https://lmpixels.com/wp/kerge-wp/demo-op/2018/04/06/best-practices-for-animated-progress-indicators/"
+											onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+											class="btn" target="_blank" title="Share on Twitter">
+											<i class="fa fa-twitter"></i>
+										</a>
+
+										<a href="https://www.linkedin.com/shareArticle?mini=true&url=https://lmpixels.com/wp/kerge-wp/demo-op/2018/04/06/best-practices-for-animated-progress-indicators/"
+											onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+											class="btn" title="Share on LinkedIn">
+											<i class="fa fa-linkedin"></i>
+										</a>
+
+										<a href="http://www.digg.com/submit?url=https://lmpixels.com/wp/kerge-wp/demo-op/2018/04/06/best-practices-for-animated-progress-indicators/"
+											onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+											class="btn" title="Share on Digg">
+											<i class="fa fa-digg"></i>
+										</a>
+									</div>
+									<!-- /Share Buttons -->
+								</div>
+
+								<div class="post-tags">
+									<span class="tags"><a href="..\..\..\..\tag\animate\index.htm"
+											rel="tag">animate</a><a href="..\..\..\..\tag\bar\index.htm"
+											rel="tag">bar</a><a href="..\..\..\..\tag\design\index.htm"
+											rel="tag">design</a><a href="..\..\..\..\tag\progress\index.htm"
+											rel="tag">progress</a><a href="..\..\..\..\tag\ui\index.htm"
+											rel="tag">ui</a></span> </div>
+							</div>
+						</article><!-- #post-## -->
+						<nav class="navigation post-navigation clearfix">
+							<div class="nav-links">
+								<a href="..\designing-the-perfect-feature-comparison-table\index.htm" rel="prev"><span
+										class="meta-nav"> Designing the Perfect Feature Comparison Table</span></a>
+							</div>
+							<!-- .nav-links -->
+						</nav><!-- .navigation -->
+
+						<div id="comments" class="comments-area">
+
+
+							<div id="respond" class="comment-respond">
+								<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a
+											rel="nofollow" id="cancel-comment-reply-link" href="index.htm#respond"
+											style="display:none;">Cancel reply</a></small></h3>
+								<form action="https://lmpixels.com/wp/kerge-wp/demo-op/wp-comments-post.php"
+									method="post" id="commentform" class="comment-form" novalidate="">
+									<div class="form-group form-group-with-icon comment-form-message"><textarea
+											id="comment" class="form-control" name="comment" placeholder="Your Comment"
+											cols="45" rows="8" aria-required="true"></textarea>
+										<div class="form-control-border"></div><i
+											class="form-control-icon fa fa-comment"></i></div>
+									<div class="form-group form-group-with-icon comment-form-author"><input id="author"
+											class="form-control" name="author" type="text" placeholder="Your Name"
+											value="" size="30" aria-required='true'>
+										<div class="form-control-border"></div><i
+											class="form-control-icon fa fa-user"></i>
+									</div>
+									<div class="form-group form-group-with-icon comment-form-email"><input id="email"
+											class="form-control" name="email" type="text" placeholder="Your Email"
+											value="" size="30" aria-required='true'>
+										<div class="form-control-border"></div><i
+											class="form-control-icon fa fa-envelope"></i>
+									</div>
+
+									<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit"
+											value="Post Comment"> <input type='hidden' name='comment_post_ID'
+											value='105' id='comment_post_ID'>
+										<input type='hidden' name='comment_parent' id='comment_parent' value='0'>
+									</p>
+								</form>
+							</div><!-- #respond -->
+
+						</div><!-- #comments -->
+					</div><!-- #content -->
+
+
+					<div id="blog-sidebar" class="blog-sidebar">
+						<a class="sidebar-toggle" href="#">
+							<i class="fa fa-list"></i>
+						</a>
+						<div class="blog-sidebar-content clearfix">
+							<div class="sidebar-item">
+								<form role="search" method="get" class="search-form"
+									action="https://lmpixels.com/wp/kerge-wp/demo-op/">
+									<label>
+										<span class="screen-reader-text">Search for:</span>
+										<input type="search" class="search-field" placeholder="Search &hellip;" value=""
+											name="s">
+									</label>
+									<input type="submit" class="search-submit" value="Search">
+								</form>
+							</div>
+							<div class="sidebar-item">
+								<div class="sidebar-title">
+									<h4>Recent Posts</h4>
+								</div>
+								<ul>
+									<li>
+										<a href="index.htm" aria-current="page">Best Practices for Animated Progress
+											Indicators</a>
+									</li>
+									<li>
+										<a href="..\designing-the-perfect-feature-comparison-table\index.htm">Designing
+											the Perfect Feature Comparison Table</a>
+									</li>
+									<li>
+										<a href="..\an-overview-of-e-commerce-platforms\index.htm">An Overview of
+											E-Commerce Platforms</a>
+									</li>
+									<li>
+										<a href="..\why-i-switched-to-sketch-for-ui-design\index.htm">Why I Switched to
+											Sketch For UI Design</a>
+									</li>
+									<li>
+										<a href="..\creative-and-innovative-navigation-designs\index.htm">Creative and
+											Innovative Navigation Designs</a>
+									</li>
+								</ul>
+
+							</div>
+							<div class="sidebar-item">
+								<div class="sidebar-title">
+									<h4>Archives</h4>
+								</div>
+								<ul>
+									<li><a href='..\..\index.htm'>April 2018</a></li>
+								</ul>
+
+							</div>
+							<div class="sidebar-item">
+								<div class="sidebar-title">
+									<h4>Categories</h4>
+								</div>
+								<ul>
+									<li class="cat-item cat-item-7"><a
+											href="..\..\..\..\category\design\index.htm">Design</a>
+									</li>
+									<li class="cat-item cat-item-23"><a
+											href="..\..\..\..\category\e-commerce\index.htm">E-Commerce</a>
+									</li>
+									<li class="cat-item cat-item-15"><a href="..\..\..\..\category\ui\index.htm">UI</a>
+									</li>
+									<li class="cat-item cat-item-8"><a
+											href="..\..\..\..\category\wordpress\index.htm">WordPress</a>
+									</li>
+								</ul>
+
+							</div>
+							<div class="sidebar-item">
+								<div class="sidebar-title">
+									<h4>Recent Comments</h4>
+								</div>
+								<ul id="recentcomments"></ul>
+							</div>
+							<div class="sidebar-item">
+								<div class="sidebar-title">
+									<h4>Meta</h4>
+								</div>
+								<ul>
+									<li><a href="..\..\..\..\wp-login.html">Log in</a></li>
+									<li><a href="..\..\..\..\feed\index.rss">Entries feed</a></li>
+									<li><a href="..\..\..\..\comments\feed\index.rss">Comments feed</a></li>
+
+									<li><a href="https://wordpress.org/">WordPress.org</a></li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div><!-- #primary -->
+			</div><!-- #main-content -->
+		</div>
+	</div>
+	<script>
+		jQuery(document).ready(function () {
+			jQuery('.site-auto-menu').on("click", "a", function (e) {
+				jQuery('#site_header').addClass('mobile-menu-hide');
+			});
+		});
+	</script>
+	<script type='text/javascript' src='assets/js/40e06bd7-1619095104.min.js' id='js-2-js'></script>
+</body>
+
+</html>
