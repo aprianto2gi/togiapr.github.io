@@ -633,7 +633,7 @@
                                                             <div class="portfolio-grid three-columns">
                                                                 <figure class="item lbaudio"
                                                                     data-groups='["category_all", &quot;category_soundcloud&quot;]'>
-                                                                    <div class="portfolio-item-img">
+                                                                    <div class="portfolio-item-img kotak">
                                                                         <img width="1280" height="853"
                                                                             src="http://i.stack.imgur.com/smHPA.png"
                                                                             class="attachment-portfolio-image-three-c size-portfolio-image-three-c wp-post-image img_s_1"
@@ -1105,7 +1105,14 @@
     </script>
     <script type='text/javascript' src='assets/js/5610677b-1618521313.min.js' id='js-3-js'></script>
     <script type='text/javascript' src='assets/js/togi.js' id=''></script>
-    <script src="assets/venobox/venobox.min.js"></script>    
+    <script src="assets/venobox/venobox.min.js"></script>
+    <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".kotak"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 </body>
 
 </html>
