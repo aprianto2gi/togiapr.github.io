@@ -89,6 +89,15 @@
           $(".a_s_6").attr("href", "http://i.stack.imgur.com/smHPA.png");
         }
       }, 1000);
+    });
+    $('.a_s_7').click(function(){
+      var newUrl = "assets/img/sertifikat/postgresql.jpg"
+      $(this).attr("href", newUrl); var url=$(this).attr("href");
+      setTimeout(function(){
+        if(url=="assets/img/sertifikat/postgresql.jpg"){
+          $(".a_s_6").attr("href", "http://i.stack.imgur.com/smHPA.png");
+        }
+      }, 1000);
     });   
 
 })(jQuery);
