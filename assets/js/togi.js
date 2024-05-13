@@ -107,6 +107,20 @@
           $(".a_s_8").attr("href", "http://i.stack.imgur.com/smHPA.png");
         }
       }, 1000);
-    });   
-
+    });
+    function getAge(dateString) {
+      var today = new Date();
+      var birthDate = new Date(dateString);
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+      }
+      return age;
+    }
+    const pengalaman= document.getElementById("pengkerMugi")
+    if(pengalaman){
+      const thn= getAge("2018/04/02");
+      pengalaman.innerHTML="Pengalaman Kerja "+ getAge("2018/04/02") +" Tahun";
+    }
 })(jQuery);
